@@ -11,12 +11,13 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *current = *head;
 	int len = 0, i, j;
+	int *array;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 	for (; current != NULL; current = current->next)
 		len++;
-	int array[len];
+	array = malloc(sizeof(int) * len);
 
 	current = *head;
 	for (i = 0; i < len; i++)
@@ -28,7 +29,11 @@ int is_palindrome(listint_t **head)
 	for (i = len - 1, j = 0; i >= j; i--, j++)
 	{
 		if (array[j] != array[i])
+		{
+			free(array);
 			return (0);
+		}
 	}
+	free(array);
 	return (1);
 }
