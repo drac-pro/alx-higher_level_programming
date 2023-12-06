@@ -11,4 +11,4 @@ def roman_to_int(roman_string):
             value -= current
         else:
             value += current
-    return value
+    return int(value)
