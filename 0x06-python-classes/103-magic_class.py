@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""Creates a class MagicClass"""
 
+"""Creates a class MagicClass"""
 
 import math
 
 
 class MagicClass:
     """Template for a MagicClass"""
+
     def __init__(self, radius=0):
         """Initializes a circle
 
