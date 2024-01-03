@@ -19,7 +19,7 @@ testing with correct inputs
 >>> print(matrix)
 [[3.5, -9], [7.45, 0]]
 >>> matrix_divided(matrix, 7)
-[[0.5, −1.29], [1.06, 0.0]]
+[[0.5, -1.29], [1.06, 0.0]]
 >>> print(matrix)
 [[3.5, -9], [7.45, 0]]
 
