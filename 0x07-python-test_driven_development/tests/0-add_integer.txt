@@ -1,0 +1,41 @@
+The ``0-add_integer`` module
+============================
+
+using ``add_integer``
+---------------------
+importing function
+>>> add_integer = __import__("0-add_integer").add_integer
+
+testing with numbers
+====================
+
+>>> add_integer(2, 5)
+7
+>>> add_integer(1.5, -3)
+-2
+>>> add_integer(-1, -0.2)
+-1
+
+numbers with non numbers
+========================
+
+>>> add_integer("a", 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(5, "b")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(a, 5)
+Traceback (most recent call last):
+...
+NameError: name 'a' is not defined
+>>> add_integer(2.5, float('NaN'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+>>> add_integer(float('Inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
