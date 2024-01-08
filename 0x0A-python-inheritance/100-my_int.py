@@ -6,8 +6,8 @@ class MyInt(int):
     """Represent a custom int class"""
     def __eq__(self, other):
         """Defines behavior for the equality operator"""
-        return (self != other)
+        return super().__ne__(other)
 
     def __ne__(self, other):
         """Defines behavior for the inequality operator"""
-        return (self == other)
+        return super().__eq__(other)
