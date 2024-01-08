@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""""
+"""defines is_same_class function"""
 
 
 def is_same_class(obj, a_class):
@@ -10,5 +10,4 @@ def is_same_class(obj, a_class):
     Returns:
         bool: True or False
     """
-    if isinstance(obj, object) and isinstance(a_class, type):
-        return True if type(obj) is a_class else False
+    return True if type(obj) is a_class else False
