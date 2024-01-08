@@ -10,4 +10,4 @@ def lookup(obj):
         list: list of attributes and methods of the object
     """
     if isinstance(obj, object):
-        return list(obj.__dict__)
+        return dir(obj)
