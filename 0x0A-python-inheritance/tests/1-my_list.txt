@@ -1,0 +1,53 @@
+The ``1-my_list.py`` module
+===========================
+
+using ``MyList``
+----------------
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> issubclass(MyList, list)
+True
+
+>>> lst = MyList()
+>>> lst.append(1)
+>>> lst.append(4)
+>>> lst.append(2)
+>>> lst.append(3)
+>>> lst.append(5)
+>>> print(lst)
+[1, 4, 2, 3, 5]
+>>> lst.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(lst)
+[1, 4, 2, 3, 5]
+
+>>> lst = MyList()
+>>> lst.print_sorted()
+[]
+
+>>> lst = MyList()
+>>> lst.append(1)
+>>> lst.append(-4)
+>>> lst.append(2)
+>>> lst.append(-3)
+>>> print(lst)
+[1, -4, 2, -3]
+>>> lst.print_sorted()
+[-4, -3, 1, 2]
+>>> print(lst)
+[1, -4, 2, -3]
+
+>>> lst.print_sorted(4)
+Traceback (most recent call last):
+...
+TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+>>> lst = MyList([8, -6, 5, 0, 3])
+>>> lst.print_sorted()
+[-6, 0, 3, 5, 8]
+
+>>> lst = MyList(7)
+Traceback (most recent call last):
+...
+TypeError: 'int' object is not iterable
