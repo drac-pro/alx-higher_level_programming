@@ -12,6 +12,11 @@ Traceback (most recent call last):
 ...
 Exception: area() is not implemented
 
+>>> bg.area(1)
+Traceback (most recent call last):
+...
+TypeError: area() takes 1 positional argument but 2 were given
+
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 
@@ -19,6 +24,11 @@ Exception: area() is not implemented
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
+
+>>> bg.integer_validator("what", True)
+Traceback (most recent call last):
+...
+TypeError: what must be an integer
 
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
@@ -29,3 +39,18 @@ ValueError: age must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: distance must be greater than 0
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator("name", 5, 2)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+>>> bg.integer_validator("name")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
