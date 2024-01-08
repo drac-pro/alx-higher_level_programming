@@ -22,4 +22,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """custom str() method"""
-        return "[Rectangle] {}/{}".format(width, height)
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
