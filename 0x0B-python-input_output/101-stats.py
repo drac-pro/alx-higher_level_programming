@@ -11,7 +11,7 @@ def print_stats(size, status_codes):
     print("File size: {}".format(size))
     for scode, count in status_codes.items():
         if count > 0:
-            print("{}: {}".format(key, status_codes[key]))
+            print("{}: {}".format(scode, count))
 
 
 if __name__ == "__main__":
@@ -32,8 +32,8 @@ if __name__ == "__main__":
             try:
                 if parts[-2] in status_codes.keys():
                     status_codes[parts[-2]] += 1
-                except Exception:
-                    pass
+            except Exception:
+                pass
             try:
                 size += int(parts[-1])
             except Exception:
