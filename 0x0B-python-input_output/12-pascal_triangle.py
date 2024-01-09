@@ -20,3 +20,4 @@ def pascal_triangle(n):
                 coef = triangle[i - 1][j - 1] + triangle[i - 1][j]
             row.append(coef)
         triangle.append(row)
+    return triangle
