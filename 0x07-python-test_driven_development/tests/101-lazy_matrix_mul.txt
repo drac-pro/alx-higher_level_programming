@@ -64,6 +64,7 @@ Traceback (most recent call last):
 ValueError: shapes (1,2) and (0,) not aligned: 2 (dim 1) != 0 (dim 0)
 
 >>> print(lazy_matrix_mul([['a', 'b']], [[1, 2], [3, 4]]))
+Traceback (most recent call last):
 ...
 TypeError: invalid data type for einsum
 
