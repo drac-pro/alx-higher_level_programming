@@ -124,8 +124,8 @@ class Base:
         turt.screen.bgcolor("#0e042b")
         turt.pensize(4)
         turt.shape("turtle")
-        turt.color("#5c8504")
 
+        turt.color("#5c8504")
         for rect in list_rectangles:
             turt.showturtle()
             turt.up()
@@ -135,6 +135,7 @@ class Base:
                 turt.forward(rect.width)
                 turt.left(90)
                 turt.forward(rect.height)
+                turt.left(90)
             turt.hideturtle()
 
         turt.color("#1b9e93")
@@ -147,5 +148,6 @@ class Base:
                 turt.forward(sq.width)
                 turt.left(90)
                 turt.forward(sq.height)
+                turt.left(90)
             turt.hideturtle()
         turtle.exitonclick()
