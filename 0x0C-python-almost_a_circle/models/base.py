@@ -107,7 +107,7 @@ class Base:
             with open(filename, newline='', encoding='utf-8') as csvfile:
                 reader = csv.DictReader(csvfile)
                 list_dicts = [{k: int(v) for k, v in d.items()}
-                        for d in reader]
+                              for d in reader]
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
