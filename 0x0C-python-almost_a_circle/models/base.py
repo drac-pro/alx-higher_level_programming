@@ -28,7 +28,7 @@ class Base:
             list_dictionaries (list): list of dictionaries
         """
         if list_dictionaries is None or list_dictionaries == []:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -87,8 +87,8 @@ class Base:
         """
         filename = cls.__name__ + ".csv"
         with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
-            if list_objs is None:
-                jf.write("[]")
+            if list_objs is None or list_objs == []:
+                csvfile.write("[]")
             else:
                 if cls.__name__ == "Rectangle":
                     fieldnames = ["id", "width", "height", "x", "y"]
@@ -119,7 +119,7 @@ class Base:
             list_rectangles (list): list of rectangle objects
             list_squares (list): list of square objects
         """
-        os.environ['DISPLAY'] = ':0'
+        """os.environ['DISPLAY'] = ':0'"""
         turt = turtle.Turtle()
         turt.screen.bgcolor("#0e042b")
         turt.pensize(4)
