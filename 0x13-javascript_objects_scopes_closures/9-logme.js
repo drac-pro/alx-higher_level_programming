@@ -1,6 +1,6 @@
 #!/usr/bin/node
 exports.logMe = function (item) {
-  item.forEach((value, index) => {
-    console.log(`${index}: ${value}`);
-  });
+  static count = 0;
+  console.log(count + ": " + item);
+  count++;
 };
